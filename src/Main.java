@@ -29,10 +29,10 @@ public class Main {
         System.out.println("task3");
         int year = 2024;
         int peopleAmountCurrent = 12_000_000;
-        int peopleIncrease = peopleAmountCurrent / 1000 * 17;
-        int peopleDecrease = peopleAmountCurrent / 1000 * 8;
-        int peopleAmountOneYear = peopleIncrease - peopleDecrease;
         for (int j = 0; j <= 10; j++) {
+            int peopleIncrease = peopleAmountCurrent / 1000 * 17;
+            int peopleDecrease = peopleAmountCurrent / 1000 * 8;
+            int peopleAmountOneYear = peopleIncrease - peopleDecrease;
             peopleAmountCurrent = peopleAmountCurrent + peopleAmountOneYear;
             year++;
             System.out.printf("%s, численность населения %s\n", year, peopleAmountCurrent);
@@ -59,7 +59,8 @@ public class Main {
 
         System.out.println("task6");
         double depositTwo = 15000;
-        for (int j = 1; j <= 108; j++) {
+        int depositKeepTime = 108;
+        for (int j = 1; j <= depositKeepTime; j++) {
             depositTwo *= 1.07;
             if (j % 6 == 0) {
                 System.out.printf("%s-й месяц, сумма - %.2f рублей\n", j, depositTwo);
